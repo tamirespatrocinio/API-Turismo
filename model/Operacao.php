@@ -7,7 +7,7 @@ class Operacao
 
     function __construct()
     {
-        require_once dirname(__FILE__) . './Constants.php';
+        require_once dirname(__FILE__) . './Conexao.php';
 
         $bd = new Conexao();
 
@@ -48,7 +48,7 @@ class Operacao
             $dica['pontosturisticos'] = $pontosturisticos;
             $dica['gastronomialocal'] = $gastronomilocal;
 
-            array_push($icas, $dica);
+            array_push($dicas, $dica);
         }
         return $dicas;
     }
